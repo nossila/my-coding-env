@@ -14,8 +14,7 @@ RUN apt-get update \
 # Install Golang
 RUN curl https://godeb.s3.amazonaws.com/godeb-amd64.tar.gz | tar -xz \
       && ./godeb install 1.3.3
-RUN mkdir /go
-ENV GOPATH /go
+ENV GOPATH /home/alisson/work/go
 
 # Install Docker
 RUN apt-get install apt-transport-https \
